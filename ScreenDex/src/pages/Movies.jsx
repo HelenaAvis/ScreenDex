@@ -1,7 +1,5 @@
-import Header from '../components/Header';
 import Search from '../components/Search';
 import MovieCard from '../components/MovieCard';
-import Footer from '../components/Footer';
 
 function Movies() {
     const movies = [
@@ -16,15 +14,13 @@ function Movies() {
     ];
 
     return (
-        <div>
-            <Header />
+        <div className="movies">
             <Search />
             <div className="movies-container">
                 {movies.map((movie) => (
                     <MovieCard key={movie.id} movie={movie} />
                 ))}
             </div>
-            <Footer />
         </div>
     );
 }
