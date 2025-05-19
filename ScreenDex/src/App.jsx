@@ -1,11 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+
+import Home from './pages/Home.jsx';
 import Movies from './pages/Movies.jsx';
+import Shows from './pages/Shows.jsx';
 
 function App() {
     return (
-        <>
-            <Movies />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/movies" element={<Movies />} />
+                <Route path="/shows" element={<Shows />} />
+                {/* 404 - route back to home page */}
+                <Route path="*" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
