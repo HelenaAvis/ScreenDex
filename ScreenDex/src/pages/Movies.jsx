@@ -1,3 +1,6 @@
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 import Search from '../components/Search';
 import MovieCard from '../components/MovieCard';
 
@@ -14,14 +17,18 @@ function Movies() {
     ];
 
     return (
-        <div className="movies">
-            <Search />
-            <div className="movies-container">
-                {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
-                ))}
-            </div>
-        </div>
+        <>
+            <Header />
+            <main className="main">
+                <Search />
+                <div className="movies-container">
+                    {movies.map((movie) => (
+                        <MovieCard key={movie.id} movie={movie} />
+                    ))}
+                </div>
+            </main>
+            <Footer />
+        </>
     );
 }
 
