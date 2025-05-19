@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css';
-
 import Home from './pages/Home.jsx';
 import Movies from './pages/Movies.jsx';
 import Shows from './pages/Shows.jsx';
+
+import './css/global.css';
 
 function App() {
     return (
