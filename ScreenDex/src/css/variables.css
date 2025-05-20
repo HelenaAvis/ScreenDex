@@ -5,6 +5,9 @@
     --color-primary: #0ff591;
     --color-accent: #09d77e;
 
+    --border-button: 3px solid var(--color-primary);
+    --border-radius-button: 10px;
+
     --font-family: 'Montserrat', sans-serif;
     --font-weight-heading: 700;
     --font-weight-subheading: 600;
