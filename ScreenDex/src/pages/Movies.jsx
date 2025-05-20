@@ -1,8 +1,8 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
-import Search from '../components/Search';
-import MovieCard from '../components/MovieCard';
+import Search from '../components/Search/Search';
+import MovieCard from '../components/MovieCard/MovieCard';
 
 function Movies() {
     const movies = [
