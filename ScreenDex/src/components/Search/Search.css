@@ -12,8 +12,8 @@
     width: 25%;
     height: 50px;
     background-color: var(--color-background);
-    border: var(--border-button);
-    border-radius: var(--border-radius-button);
+    border: var(--border);
+    border-radius: var(--border-radius);
     color: var(--color-primary);
     font-family: var(--font-family);
     font-size: var(--font-size-body);
@@ -25,8 +25,8 @@
     height: 43px;
     padding: 0px 10px;
     background-color: var(--color-background);
-    border: var(--border-button);
-    border-radius: var(--border-radius-button);
+    border: var(--border);
+    border-radius: var(--border-radius);
 
     outline: none;
 
@@ -43,5 +43,6 @@
 .movies-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 25px 20px;
 }
