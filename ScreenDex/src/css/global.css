@@ -9,10 +9,32 @@ body {
 
 #root {
     min-height: 100vh;
+    margin: 0px 20px;
     display: flex;
     flex-direction: column;
 }
 
 .main {
-    margin: 20px 0px;
+    margin: 0px 50px;
+}
+
+.text--heading {
+    font-family: var(--font-family);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    color: var(--color-primary);
+}
+
+.text--subheading {
+    font-family: var(--font-family);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-subheading);
+    color: var(--color-primary);
+}
+
+.text--body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-primary);
 }
