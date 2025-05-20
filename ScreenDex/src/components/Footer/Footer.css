@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    gap: 50px;
+    margin-top: auto;
+    align-items: center;
+    height: 75px;
+    padding: 0px 20px;
+}
+
+.footer__link {
+    display: block;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-subheading);
+}
