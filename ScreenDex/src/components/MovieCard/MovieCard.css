@@ -23,6 +23,8 @@
     font-size: var(--font-size-subheading);
     font-weight: var(--font-weight-subheading);
     color: var(--color-primary);
+    text-align: center;
+    margin: 10px 25px;
 }
 
 .movie-card__poster {
