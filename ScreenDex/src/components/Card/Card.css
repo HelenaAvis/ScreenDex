@@ -36,6 +36,15 @@
     margin: 10px 25px;
 }
 
+.card__id {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-primary);
+    text-align: center;
+    margin: 10px 25px;
+}
+
 .card__poster {
     width: 200px;
     height: 300px;
