@@ -10,6 +10,7 @@
 
     box-shadow: var(--shadow);
 
+    background-color: var(--color-site-background);
     border: var(--border);
     border-radius: var(--border-radius);
 }
