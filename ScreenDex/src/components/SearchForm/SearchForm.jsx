@@ -1,6 +1,6 @@
-import './Search.css';
+import './SearchForm.css';
 
-function Search() {
+function SearchForm() {
     return (
         <div className="search">
             <button className="search__type-button">By Title</button>
@@ -9,4 +9,4 @@ function Search() {
     );
 }
 
-export default Search;
+export default SearchForm;

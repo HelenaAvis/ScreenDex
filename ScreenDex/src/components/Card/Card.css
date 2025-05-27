@@ -1,4 +1,4 @@
-.movie-card {
+.card {
     transition-duration: 0.3s;
     display: flex;
     flex-direction: column;
@@ -13,12 +13,12 @@
     border-radius: var(--border-radius);
 }
 
-.movie-card:hover {
+.card:hover {
     height: 510px;
     width: 310px;
 }
 
-.movie-card__title {
+.card__title {
     font-family: var(--font-family);
     font-size: var(--font-size-subheading);
     font-weight: var(--font-weight-subheading);
@@ -27,7 +27,16 @@
     margin: 10px 25px;
 }
 
-.movie-card__poster {
+.card__year {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body-large);
+    font-weight: var(--font-weight-subheading);
+    color: var(--color-primary);
+    text-align: center;
+    margin: 10px 25px;
+}
+
+.card__poster {
     width: 200px;
     height: 300px;
     margin-top: auto;

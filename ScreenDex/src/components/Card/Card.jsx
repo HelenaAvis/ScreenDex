@@ -1,11 +1,11 @@
 import './Card.css';
-import placeholder from '../../assets/placeholder.svg';
 
-function Card({ movie }) {
+function Card({ item }) {
     return (
-        <div className="movie-card">
-            <h3 className="movie-card__title">{movie.title}</h3>
-            <img src={placeholder} alt={movie.title} className="movie-card__poster" />
+        <div className="card">
+            <h2 className="card__title">{item.Title}</h2>
+            <h3 className="card__year">{item.Year}</h3>
+            <img src={item.Poster} alt={item.Title} className="card__poster" />
         </div>
     );
 }
