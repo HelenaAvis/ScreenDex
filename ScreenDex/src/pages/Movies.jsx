@@ -2,7 +2,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
 import Search from '../components/Search/Search';
-import MovieCard from '../components/MovieCard/MovieCard';
+import MovieCard from '../components/Card/Card';
 
 function Movies() {
     const movies = [

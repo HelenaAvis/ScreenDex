@@ -1,7 +1,7 @@
-import './MovieCard.css';
+import './Card.css';
 import placeholder from '../../assets/placeholder.svg';
 
-function MovieCard({ movie }) {
+function Card({ movie }) {
     return (
         <div className="movie-card">
             <h3 className="movie-card__title">{movie.title}</h3>
@@ -10,4 +10,4 @@ function MovieCard({ movie }) {
     );
 }
 
-export default MovieCard;
+export default Card;
