@@ -10,7 +10,7 @@
     display: block;
     width: 25%;
     height: 50px;
-    background-color: var(--color-background);
+    background-color: var(--color-site-background);
     border: var(--border);
     border-radius: var(--border-radius);
     color: var(--color-primary);
@@ -23,7 +23,7 @@
     width: 70%;
     height: 43px;
     padding: 0px 10px;
-    background-color: var(--color-background);
+    background-color: var(--color-site-background);
     border: var(--border);
     border-radius: var(--border-radius);
 
