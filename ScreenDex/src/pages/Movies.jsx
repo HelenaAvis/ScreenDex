@@ -12,7 +12,6 @@ function Movies() {
 
     function search(query) {
         console.log('Searching Movies for: ' + query);
-        console.log(baseURL + import.meta.env.VITE_API_KEY + '&s=' + query + '&type=movie');
         fetch(baseURL + import.meta.env.VITE_API_KEY + '&s=' + query + '&type=movie')
             .then((response) => {
                 return response.json();
