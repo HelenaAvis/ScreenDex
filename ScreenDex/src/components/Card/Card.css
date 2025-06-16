@@ -8,6 +8,8 @@
     width: 300px;
     margin: 20px;
 
+    text-decoration: none;
+
     box-shadow: var(--shadow);
 
     background-color: var(--color-site-background);
