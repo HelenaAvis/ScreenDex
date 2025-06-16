@@ -6,7 +6,7 @@
     width: 50%;
 }
 
-.search__type-button {
+.search__button {
     display: block;
     width: 25%;
     height: 50px;
@@ -19,17 +19,9 @@
     font-weight: var(--font-weight-body);
 }
 
-.search__submit-button {
-    display: block;
-    width: 25%;
-    height: 50px;
-    background-color: var(--color-site-background);
-    border: var(--border);
-    border-radius: var(--border-radius);
-    color: var(--color-primary);
-    font-family: var(--font-family);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
+.search__button:hover {
+    transition-duration: var(--transition-duration);
+    box-shadow: var(--shadow);
 }
 
 .search__input {
