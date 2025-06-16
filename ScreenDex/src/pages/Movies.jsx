@@ -7,7 +7,7 @@ import SearchForm from '../components/SearchForm/SearchForm';
 import Card from '../components/Card/Card';
 
 function Movies() {
-    const baseURL = 'http://www.omdbapi.com/?apikey=';
+    const baseURL = 'https://www.omdbapi.com/?apikey=';
     const [movies, setMovies] = useState([]);
 
     function search(query) {
