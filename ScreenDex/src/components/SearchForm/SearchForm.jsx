@@ -2,25 +2,32 @@ import { useState } from 'react';
 
 import './SearchForm.css';
 
-function SearchForm() {
-    const [searchType, setSearchType] = useState('Title');
+function SearchForm({ searchFunction }) {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            searchFunction(searchQuery);
+        }
+    }
 
     return (
         <div className="search">
-            <button
-                className="search__button"
-                onClick={function handleClick() {
-                    if (searchType === 'Title') {
-                        setSearchType('ID');
-                    } else {
-                        setSearchType('Title');
-                    }
-                }}
-            >
-                By {searchType}
+            <input
+                type="text"
+                placeholder="Search Movies..."
+                className="search__input"
+                value={searchQuery}
+                onChange={handleChange}
+                onKeyDown={handleKeyPress}
+            />
+            <button className="search__button" onClick={() => searchFunction(searchQuery)}>
+                Search
             </button>
-            <input type="text" placeholder="Search Movies..." className="search__input" />
-            <button className="search__button">Search</button>
         </div>
     );
 }
