@@ -5,6 +5,7 @@ body {
     padding: 0;
     font-family: var(--font-family);
     background-color: var(--color-site-background);
+    scroll-behavior: smooth;
 }
 
 #root {
