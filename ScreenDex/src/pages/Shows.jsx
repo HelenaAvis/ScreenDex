@@ -6,8 +6,6 @@ import Footer from '../components/Footer/Footer';
 import SearchForm from '../components/SearchForm/SearchForm';
 import Card from '../components/Card/Card';
 
-import data from '../data/shows.json';
-
 function Shows() {
     const [shows, setShows] = useState([]);
 
