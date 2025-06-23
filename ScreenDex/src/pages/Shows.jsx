@@ -13,6 +13,13 @@ function Shows() {
 
     function search(query) {
         console.log('Searching Shows for: ' + query);
+        fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=series')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setShows(data.Search);
+            });
     }
 
     return (
@@ -21,9 +28,9 @@ function Shows() {
             <main className="main">
                 <h1 className="text--heading">Search TV Shows:</h1>
                 <SearchForm searchFunction={search} />
-                <p className="text--body">{data.Search.length} shows found</p>
+                <p className="text--body">{shows.length} shows found</p>
                 <div className="results-container">
-                    {data.Search.map((show) => (
+                    {shows.map((show) => (
                         <Card key={show.imdbID} item={show} />
                     ))}
                 </div>
