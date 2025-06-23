@@ -24,8 +24,9 @@ function Movies() {
         <>
             <Header />
             <main className="main">
+                <h1 className="text--heading">Search Movies:</h1>
                 <SearchForm searchFunction={search} />
-                <div className="movies-container">
+                <div className="results-container">
                     {movies.map((movie) => (
                         <Card key={movie.imdbID} item={movie} />
                     ))}
