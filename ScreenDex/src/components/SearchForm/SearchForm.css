@@ -44,7 +44,7 @@
     color: var(--color-primary);
 }
 
-.movies-container {
+.results-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
