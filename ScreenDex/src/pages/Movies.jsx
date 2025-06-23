@@ -7,12 +7,11 @@ import SearchForm from '../components/SearchForm/SearchForm';
 import Card from '../components/Card/Card';
 
 function Movies() {
-    const baseURL = 'https://www.omdbapi.com/?apikey=';
     const [movies, setMovies] = useState([]);
 
     function search(query) {
         console.log('Searching Movies for: ' + query);
-        fetch(baseURL + import.meta.env.VITE_API_KEY + '&s=' + query + '&type=movie')
+        fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=movie')
             .then((response) => {
                 return response.json();
             })
