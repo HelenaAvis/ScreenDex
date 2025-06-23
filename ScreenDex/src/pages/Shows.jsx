@@ -21,6 +21,7 @@ function Shows() {
             <main className="main">
                 <h1 className="text--heading">Search TV Shows:</h1>
                 <SearchForm searchFunction={search} />
+                <p className="text--body">{data.Search.length} shows found</p>
                 <div className="results-container">
                     {data.Search.map((show) => (
                         <Card key={show.imdbID} item={show} />
