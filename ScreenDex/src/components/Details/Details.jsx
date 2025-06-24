@@ -41,6 +41,7 @@ function Details() {
                     ))}
                 </h2>
                 <h2 className="text--subheading details__heading">Age Rating: {details.Rated}</h2>
+                <h2 className="text--subheading details__heading">Runtime: {details.Runtime}</h2>
                 <h2 className="text--subheading details__heading">Directed By: {details.Director}</h2>
                 <h2 className="text--subheading details__heading">Written By: {details.Writer}</h2>
                 <h2 className="text--subheading details__heading">Starring: {details.Actors}</h2>
