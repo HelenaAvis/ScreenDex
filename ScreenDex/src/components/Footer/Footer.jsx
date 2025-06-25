@@ -9,6 +9,9 @@ function Footer() {
             <a className="footer__link" href="https://github.com/HelenaAvis/ScreenDex">
                 Github Repo
             </a>
+            <a className="footer__link" href="https://www.omdbapi.com/">
+                OMDb API
+            </a>
         </footer>
     );
 }

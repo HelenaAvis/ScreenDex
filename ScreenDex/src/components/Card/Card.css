@@ -5,10 +5,11 @@
     align-items: center;
     justify-content: space-between;
     height: 500px;
-    width: 300px;
+    width: 40%;
     margin: 20px;
 
     text-decoration: none;
+    overflow: hidden;
 
     box-shadow: var(--shadow);
 
@@ -19,21 +20,21 @@
 
 .card:hover {
     height: 510px;
-    width: 310px;
+    width: 42%;
 }
 
 .card__title {
     font-family: var(--font-family);
-    font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-subheading);
+    font-size: var(--font-size-body-large);
+    font-weight: var(--font-weight-heading);
     color: var(--color-primary);
     text-align: center;
-    margin: 15px 15px;
+    margin: 5px 5px;
 }
 
 .card__year {
     font-family: var(--font-family);
-    font-size: var(--font-size-body-large);
+    font-size: var(--font-size-body);
     font-weight: var(--font-weight-subheading);
     color: var(--color-primary);
     text-align: center;
@@ -50,7 +51,38 @@
 }
 
 .card__poster {
-    width: 75%;
-    height: 60%;
+    aspect-ratio: 2 / 3;
+    height: 65%;
+    width: auto;
     border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 800px) {
+    /* styling for mobile displays */
+    .card {
+        width: 85%;
+    }
+
+    .card:hover {
+        height: 510px;
+        width: 87%;
+    }
+
+    .card__poster {
+        aspect-ratio: 2 / 3;
+        height: 50%;
+        width: auto;
+    }
+
+    .card__title {
+        font-size: var(--font-size-body-large-mobile);
+    }
+
+    .card__year {
+        font-size: var(--font-size-body-mobile);
+    }
+
+    .card__id {
+        font-size: var(--font-size-body-mobile);
+    }
 }
