@@ -9,6 +9,7 @@
     margin: 20px;
 
     text-decoration: none;
+    overflow: hidden;
 
     box-shadow: var(--shadow);
 
@@ -17,16 +18,9 @@
     border-radius: var(--border-radius);
 }
 
-@media screen and (max-width: 800px) {
-    /* styling for mobile displays */
-    .card {
-        width: 85%;
-    }
-}
-
 .card:hover {
     height: 510px;
-    width: 43%;
+    width: 42%;
 }
 
 .card__title {
@@ -58,7 +52,32 @@
 
 .card__poster {
     aspect-ratio: 2 / 3;
-    height: 70%;
+    height: 65%;
     width: auto;
     border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 800px) {
+    /* styling for mobile displays */
+    .card {
+        width: 85%;
+    }
+
+    .card__poster {
+        aspect-ratio: 2 / 3;
+        height: 50%;
+        width: auto;
+    }
+
+    .card__title {
+        font-size: var(--font-size-body-large-mobile);
+    }
+
+    .card__year {
+        font-size: var(--font-size-body-mobile);
+    }
+
+    .card__id {
+        font-size: var(--font-size-body-mobile);
+    }
 }

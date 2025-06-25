@@ -20,9 +20,17 @@
     --font-weight-subheading: 600;
     --font-weight-body: 400;
 
+    /* Desktop font sizes */
     --font-size-logo: 75px;
     --font-size-heading: 50px;
     --font-size-subheading: 32px;
-    --font-size-body-large: 26px;
+    --font-size-body-large: 24px;
     --font-size-body: 18px;
+
+    /* Mobile font sizes */
+    --font-size-logo-mobile: 50px;
+    --font-size-heading-mobile: 40px;
+    --font-size-subheading-mobile: 28px;
+    --font-size-body-large-mobile: 20px;
+    --font-size-body-mobile: 14px;
 }
