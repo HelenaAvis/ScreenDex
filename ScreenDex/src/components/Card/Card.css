@@ -63,6 +63,11 @@
         width: 85%;
     }
 
+    .card:hover {
+        height: 510px;
+        width: 87%;
+    }
+
     .card__poster {
         aspect-ratio: 2 / 3;
         height: 50%;
