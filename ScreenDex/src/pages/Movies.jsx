@@ -8,6 +8,7 @@ import Card from '../components/Card/Card';
 
 function Movies() {
     const [movies, setMovies] = useState([]);
+    const [totalResults, setTotalResults] = useState(0);
 
     function search(query) {
         console.log('Searching Movies for: ' + query);
@@ -17,6 +18,7 @@ function Movies() {
             })
             .then((data) => {
                 setMovies(data.Search);
+                setTotalResults(data.totalResults);
             });
     }
 
@@ -26,7 +28,7 @@ function Movies() {
             <main className="main">
                 <h1 className="text--heading">Search Movies:</h1>
                 <SearchForm searchFunction={search} />
-                <p className="text--body">{movies.length} movies found</p>
+                <p className="text--body">{totalResults} movies found</p>
                 <div className="results-container">
                     {movies.map((movie) => (
                         <Card key={movie.imdbID} item={movie} />
