@@ -41,6 +41,7 @@
 @media screen and (max-width: 800px) {
     /* styling for mobile displays */
     .header {
+        gap: 25px;
         flex-direction: column;
         align-items: flex-start;
     }
