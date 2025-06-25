@@ -49,3 +49,16 @@ body {
     font-weight: var(--font-weight-body);
     color: var(--color-primary);
 }
+
+@media screen and (max-width: 800px) {
+    /* styling for mobile displays */
+    .text--heading {
+        font-size: var(--font-size-heading-mobile);
+    }
+    .text--subheading {
+        font-size: var(--font-size-subheading-mobile);
+    }
+    .text--body {
+        font-size: var(--font-size-body-mobile);
+    }
+}

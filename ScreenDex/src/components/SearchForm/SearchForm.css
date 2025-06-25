@@ -63,9 +63,11 @@
 
     .search__input {
         width: 100%;
+        font-size: var(--font-size-body-mobile);
     }
 
     .search__button {
         width: 100%;
+        font-size: var(--font-size-body-mobile);
     }
 }
