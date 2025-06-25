@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -15,7 +15,7 @@ function Movies() {
     const [page, setPage] = useState(1);
 
     function search() {
-        console.log('Searching Movies for: ' + query);
+        console.log('Searching Movies for: ' + query + ' on page: ' + page);
         fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=movie&page=' + page)
             .then((response) => {
                 return response.json();
@@ -33,12 +33,18 @@ function Movies() {
             });
     }
 
+    // Search when there is a change in the page
+    useEffect(() => {
+        console.log('page changed to page ' + page);
+        search();
+    }, [page]);
+
     return (
         <>
             <Header />
             <main className="main">
                 <h1 className="text--heading">Search Movies:</h1>
-                <SearchForm searchQuery={query} setSearchQuery={setQuery} searchFunction={search} />
+                <SearchForm searchQuery={query} setSearchQuery={setQuery} setPage={setPage} searchFunction={search} />
                 {response ? (
                     <>
                         <p className="text--body">{totalResults} movies found</p>

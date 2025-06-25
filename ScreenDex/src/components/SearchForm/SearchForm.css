@@ -26,12 +26,6 @@
     box-shadow: var(--shadow);
 }
 
-.search__button:disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
 .search__input {
     width: 70%;
     height: 50px;
