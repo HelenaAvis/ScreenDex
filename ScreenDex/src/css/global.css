@@ -1,8 +1,12 @@
 @import url('./variables.css');
 
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: var(--font-family);
     background-color: var(--color-site-background);
     scroll-behavior: smooth;
@@ -10,13 +14,13 @@ body {
 
 #root {
     min-height: 100vh;
-    margin: 0px 20px;
     display: flex;
     flex-direction: column;
 }
 
 .main {
-    margin: 0px 50px;
+    margin: 20px auto;
+    width: 90%;
     padding: 25px;
     background-color: var(--color-main-background);
     border: 3px solid var(--color-main-border);
