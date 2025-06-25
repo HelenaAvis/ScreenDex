@@ -21,6 +21,11 @@
     font-weight: var(--font-weight-body);
 }
 
+.page-controls__button:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
 .page-controls__current-page {
     width: 50%;
     text-align: center;

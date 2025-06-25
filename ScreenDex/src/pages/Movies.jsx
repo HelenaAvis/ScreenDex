@@ -14,7 +14,7 @@ function Movies() {
 
     function search(query) {
         console.log('Searching Movies for: ' + query);
-        fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=movie')
+        fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=movie&page=' + page)
             .then((response) => {
                 return response.json();
             })
@@ -31,7 +31,7 @@ function Movies() {
                 <h1 className="text--heading">Search Movies:</h1>
                 <SearchForm searchFunction={search} />
                 <p className="text--body">{totalResults} movies found</p>
-                <PageControls page={page} />
+                <PageControls page={page} setPage={setPage} totalResults={totalResults} />
                 <div className="results-container">
                     {movies.map((movie) => (
                         <Card key={movie.imdbID} item={movie} />
