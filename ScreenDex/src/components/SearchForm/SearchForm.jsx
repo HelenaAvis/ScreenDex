@@ -1,17 +1,14 @@
-import { useState } from 'react';
-
 import './SearchForm.css';
 
-function SearchForm({ searchFunction }) {
-    const [searchQuery, setSearchQuery] = useState('');
-
+function SearchForm({ searchQuery, setSearchQuery, setPage, searchFunction }) {
     const handleChange = (event) => {
         setSearchQuery(event.target.value);
     };
 
     function handleKeyPress(event) {
         if (event.key === 'Enter') {
-            searchFunction(searchQuery);
+            setPage(1);
+            searchFunction();
         }
     }
 
@@ -19,13 +16,19 @@ function SearchForm({ searchFunction }) {
         <div className="search">
             <input
                 type="text"
-                placeholder="Search Movies..."
+                placeholder="Enter name..."
                 className="search__input"
                 value={searchQuery}
                 onChange={handleChange}
                 onKeyDown={handleKeyPress}
             />
-            <button className="search__button" onClick={() => searchFunction(searchQuery)}>
+            <button
+                className="search__button"
+                onClick={() => {
+                    setPage(1);
+                    searchFunction();
+                }}
+            >
                 Search
             </button>
         </div>
