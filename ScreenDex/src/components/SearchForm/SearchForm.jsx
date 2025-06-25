@@ -2,16 +2,14 @@ import { useState } from 'react';
 
 import './SearchForm.css';
 
-function SearchForm({ searchFunction }) {
-    const [searchQuery, setSearchQuery] = useState('');
-
+function SearchForm({ searchQuery, setSearchQuery, searchFunction }) {
     const handleChange = (event) => {
         setSearchQuery(event.target.value);
     };
 
     function handleKeyPress(event) {
-        if (event.key === 'Enter') {
-            searchFunction(searchQuery);
+        if (event.key === 'Enter' && searchQuery.trim() !== '') {
+            searchFunction();
         }
     }
 
@@ -25,7 +23,7 @@ function SearchForm({ searchFunction }) {
                 onChange={handleChange}
                 onKeyDown={handleKeyPress}
             />
-            <button className="search__button" onClick={() => searchFunction(searchQuery)}>
+            <button className="search__button" onClick={() => searchFunction()} disabled={searchQuery.trim() === ''}>
                 Search
             </button>
         </div>

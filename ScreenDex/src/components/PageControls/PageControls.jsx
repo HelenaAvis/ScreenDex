@@ -1,6 +1,6 @@
 import './PageControls.css';
 
-function PageControls({ page, setPage, totalResults }) {
+function PageControls({ page, setPage, totalResults, searchFunction }) {
     return (
         <div className="page-controls">
             <button className="page-controls__button" disabled={page <= 1} onClick={() => setPage(page - 1)}>

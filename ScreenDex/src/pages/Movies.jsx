@@ -9,18 +9,27 @@ import Card from '../components/Card/Card';
 
 function Movies() {
     const [movies, setMovies] = useState([]);
+    const [query, setQuery] = useState('');
+    const [response, setResponse] = useState(false);
     const [totalResults, setTotalResults] = useState(0);
     const [page, setPage] = useState(1);
 
-    function search(query) {
+    function search() {
         console.log('Searching Movies for: ' + query);
         fetch(import.meta.env.VITE_BASE_URL + '&s=' + query + '&type=movie&page=' + page)
             .then((response) => {
                 return response.json();
             })
             .then((data) => {
-                setMovies(data.Search);
-                setTotalResults(data.totalResults);
+                if (data.Response === 'True') {
+                    setResponse(true);
+                    setMovies(data.Search);
+                    setTotalResults(data.totalResults);
+                } else {
+                    setResponse(false);
+                    setMovies([]);
+                    setTotalResults(0);
+                }
             });
     }
 
@@ -29,14 +38,20 @@ function Movies() {
             <Header />
             <main className="main">
                 <h1 className="text--heading">Search Movies:</h1>
-                <SearchForm searchFunction={search} />
-                <p className="text--body">{totalResults} movies found</p>
-                <PageControls page={page} setPage={setPage} totalResults={totalResults} />
-                <div className="results-container">
-                    {movies.map((movie) => (
-                        <Card key={movie.imdbID} item={movie} />
-                    ))}
-                </div>
+                <SearchForm searchQuery={query} setSearchQuery={setQuery} searchFunction={search} />
+                {response ? (
+                    <>
+                        <p className="text--body">{totalResults} movies found</p>
+                        <PageControls page={page} setPage={setPage} totalResults={totalResults} />
+                        <div className="results-container">
+                            {movies.map((movie) => (
+                                <Card key={movie.imdbID} item={movie} />
+                            ))}
+                        </div>
+                    </>
+                ) : (
+                    <p className="text--body">No results found. Please try a different search.</p>
+                )}
             </main>
             <Footer />
         </>
