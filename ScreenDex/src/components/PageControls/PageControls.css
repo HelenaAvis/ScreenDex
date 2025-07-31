@@ -21,6 +21,11 @@
     font-weight: var(--font-weight-body);
 }
 
+.page-controls__button:hover {
+    transition-duration: var(--transition-duration);
+    box-shadow: var(--shadow);
+}
+
 .page-controls__button:disabled {
     opacity: 0.25;
     cursor: not-allowed;

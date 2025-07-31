@@ -41,7 +41,11 @@ function Details() {
                     ))}
                 </h2>
                 <h2 className="text--subheading details__heading">Age Rating: {details.Rated}</h2>
-                <h2 className="text--subheading details__heading">Runtime: {details.Runtime}</h2>
+                {details.Type === 'movie' ? (
+                    <h2 className="text--subheading details__heading">Movie Runtime: {details.Runtime}</h2>
+                ) : (
+                    <h2 className="text--subheading details__heading">Episode Runtime: {details.Runtime}</h2>
+                )}
                 {details.Type === 'movie' ? (
                     <h2 className="text--subheading details__heading">Box Office: {details.BoxOffice}</h2>
                 ) : (
