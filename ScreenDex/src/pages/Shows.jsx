@@ -58,7 +58,7 @@ function Shows() {
                         </div>
                     </>
                 ) : (
-                    <p className="text--body">No results found. Please try a different search.</p>
+                    <p className="text--body">No results found. Please try a different search query.</p>
                 )}
             </main>
             <Footer />
