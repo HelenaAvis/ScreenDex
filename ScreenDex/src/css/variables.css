@@ -2,16 +2,14 @@
 
 :root {
     --color-site-background: #0a100d;
-    --color-main-background: #18261f;
     --color-main-border: #121b16;
 
     --color-primary: #0ff591;
-    --color-accent: #09d77e;
 
     --border: 3px solid var(--color-primary);
     --separator: 2px dotted var(--color-primary);
     --border-radius: 10px;
-    --shadow: 0px 0px 15px 5px var(--color-accent);
+    --shadow: 0px 0px 15px 5px var(--color-primary);
 
     --transition-duration: 0.3s;
 
